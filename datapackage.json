@@ -1,0 +1,2692 @@
+{
+  "@context": "http://schemas.frictionlessdata.io/fiscal-data-package.jsonld",
+  "author": "Edgar Alvarenga",
+  "bytes": 524873403,
+  "cityCode": "Berlin",
+  "count_of_rows": 1318368,
+  "countryCode": "DE",
+  "fiscalPeriod": {
+    "end": "2021-12-31",
+    "start": "2014-01-01"
+  },
+  "hash": "c0cbc6ab4b0d622848481d1f2b28669c",
+  "model": {
+    "dimensions": {
+      "administrative-classification": {
+        "attributes": {
+          "einzelplan": {
+            "source": "einzelplan",
+            "title": "einzelplan"
+          },
+          "einzelplanbezeichnung": {
+            "labelfor": "einzelplan",
+            "source": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung"
+          },
+          "kapitel": {
+            "parent": "einzelplan",
+            "source": "kapitel",
+            "title": "kapitel"
+          },
+          "kapitelbezeichnung": {
+            "labelfor": "kapitel",
+            "source": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung"
+          },
+          "titel": {
+            "parent": "kapitel",
+            "source": "titel",
+            "title": "titel"
+          },
+          "titelbezeichnung": {
+            "labelfor": "titel",
+            "source": "titelbezeichnung",
+            "title": "titelbezeichnung"
+          }
+        },
+        "classificationType": "administrative",
+        "dimensionType": "classification",
+        "primaryKey": [
+          "einzelplan",
+          "kapitel",
+          "titel"
+        ]
+      },
+      "date": {
+        "attributes": {
+          "jahr": {
+            "source": "jahr",
+            "title": "jahr"
+          }
+        },
+        "dimensionType": "datetime",
+        "primaryKey": [
+          "jahr"
+        ]
+      },
+      "direction": {
+        "attributes": {
+          "titelart": {
+            "source": "titelart",
+            "title": "titelart"
+          }
+        },
+        "dimensionType": "other",
+        "primaryKey": [
+          "titelart"
+        ]
+      },
+      "economic-classification": {
+        "attributes": {
+          "gruppe": {
+            "parent": "obergruppe",
+            "source": "gruppe",
+            "title": "gruppe"
+          },
+          "gruppenbezeichnung": {
+            "labelfor": "gruppe",
+            "source": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung"
+          },
+          "hauptgruppe": {
+            "source": "hauptgruppe",
+            "title": "hauptgruppe"
+          },
+          "hauptgruppenbezeichnung": {
+            "labelfor": "hauptgruppe",
+            "source": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung"
+          },
+          "obergruppe": {
+            "parent": "hauptgruppe",
+            "source": "obergruppe",
+            "title": "obergruppe"
+          },
+          "obergruppenbezeichnung": {
+            "labelfor": "obergruppe",
+            "source": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung"
+          }
+        },
+        "classificationType": "economic",
+        "dimensionType": "classification",
+        "primaryKey": [
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe"
+        ]
+      },
+      "expenditure-type": {
+        "attributes": {
+          "bezeichnung": {
+            "labelfor": "typ",
+            "source": "bezeichnung",
+            "title": "bezeichnung"
+          },
+          "typ": {
+            "source": "typ",
+            "title": "typ"
+          }
+        },
+        "dimensionType": "other",
+        "primaryKey": [
+          "typ"
+        ]
+      },
+      "fin-source": {
+        "attributes": {
+          "bereich": {
+            "source": "bereich",
+            "title": "bereich"
+          },
+          "bereichsbezeichnung": {
+            "labelfor": "bereich",
+            "source": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung"
+          }
+        },
+        "dimensionType": "other",
+        "primaryKey": [
+          "bereich"
+        ]
+      },
+      "functional-classification": {
+        "attributes": {
+          "funktion": {
+            "parent": "oberfunktion",
+            "source": "funktion",
+            "title": "funktion"
+          },
+          "funktionsbezeichnung": {
+            "labelfor": "funktion",
+            "source": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung"
+          },
+          "hauptfunktion": {
+            "source": "hauptfunktion",
+            "title": "hauptfunktion"
+          },
+          "hauptfunktionsbezeichnung": {
+            "labelfor": "hauptfunktion",
+            "source": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung"
+          },
+          "oberfunktion": {
+            "parent": "hauptfunktion",
+            "source": "oberfunktion",
+            "title": "oberfunktion"
+          },
+          "oberfunktionsbezeichnung": {
+            "labelfor": "oberfunktion",
+            "source": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung"
+          }
+        },
+        "classificationType": "functional",
+        "dimensionType": "classification",
+        "primaryKey": [
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion"
+        ]
+      },
+      "unknown": {
+        "attributes": {
+          "betragtyp": {
+            "source": "betragtyp",
+            "title": "betragTyp"
+          }
+        },
+        "dimensionType": "other",
+        "primaryKey": [
+          "betragtyp"
+        ]
+      }
+    },
+    "measures": {
+      "betrag": {
+        "source": "betrag",
+        "title": "betrag"
+      }
+    }
+  },
+  "name": "berlin-2014-2021",
+  "owner": "99030977d67877e4fc4e5b7306c9f4b1",
+  "profile": "data-package",
+  "profiles": {
+    "fiscal": "*",
+    "tabular": "*"
+  },
+  "promise": {},
+  "regionCode": "eu",
+  "resources": [
+    {
+      "bytes": 393653106,
+      "count_of_rows": 781359,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "836f6ede98e6af144d45dfd070fc553b",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012",
+      "path": "data/dhh-2014-2012.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 150677919,
+      "count_of_rows": 299054,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2014.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "8b1a65fa2e7ca94eaf557db932028e98",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2014",
+      "path": "data/dhh-2014-2012__2014.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 150778770,
+      "count_of_rows": 299234,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2015.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "994aa82b172bb1fe8e9d029ef809c60f",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2015",
+      "path": "data/dhh-2014-2012__2015.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 151039611,
+      "count_of_rows": 299676,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2016.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "92cd4012539ed3103dddf304d5b462b6",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2016",
+      "path": "data/dhh-2014-2012__2016.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 151125768,
+      "count_of_rows": 299907,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2017.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "9a84c450c4ede249cd06f37b19273971",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2017",
+      "path": "data/dhh-2014-2012__2017.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 151084320,
+      "count_of_rows": 299764,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2018.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "94da76d9cabe1ad1cad705599403d889",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2018",
+      "path": "data/dhh-2014-2012__2018.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 141588686,
+      "count_of_rows": 281108,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2019.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "9bcf4d1e66398fc4972986ef702e5bc4",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2019",
+      "path": "data/dhh-2014-2012__2019.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 142342524,
+      "count_of_rows": 282678,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2020.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "2919b70686352431f47f7abd4b1ac4f9",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2020",
+      "path": "data/dhh-2014-2012__2020.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    },
+    {
+      "bytes": 142324261,
+      "count_of_rows": 282656,
+      "dialect": {
+        "delimiter": ",",
+        "doubleQuote": true,
+        "lineTerminator": "\r\n",
+        "quoteChar": "\"",
+        "skipInitialSpace": false
+      },
+      "dpp:streamedFrom": "/tmp/tmpvsz4lpuf/final/data/dhh-2014-2012__2021.csv",
+      "encoding": "utf-8",
+      "format": "csv",
+      "hash": "bf79642dc4cffdf79a48e22ecbeafb3d",
+      "mediatype": "text/csv",
+      "name": "dhh-2014-2012__2021",
+      "path": "data/dhh-2014-2012__2021.csv",
+      "profile": "data-resource",
+      "schema": {
+        "fields": [
+          {
+            "columnType": "expenditure-type:code",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "typ",
+            "slug": "typ",
+            "title": "typ",
+            "type": "string"
+          },
+          {
+            "columnType": "expenditure-type:label",
+            "conceptType": "expenditure-type",
+            "format": "default",
+            "name": "bezeichnung",
+            "slug": "bezeichnung",
+            "title": "bezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:code",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereich",
+            "slug": "bereich",
+            "title": "bereich",
+            "type": "string"
+          },
+          {
+            "columnType": "fin-source:generic:label",
+            "conceptType": "fin-source",
+            "format": "default",
+            "name": "bereichsbezeichnung",
+            "slug": "bereichsbezeichnung",
+            "title": "bereichsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplan",
+            "slug": "einzelplan",
+            "title": "einzelplan",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level1:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "einzelplanbezeichnung",
+            "slug": "einzelplanbezeichnung",
+            "title": "einzelplanbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitel",
+            "slug": "kapitel",
+            "title": "kapitel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level2:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "kapitelbezeichnung",
+            "slug": "kapitelbezeichnung",
+            "title": "kapitelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppe",
+            "slug": "hauptgruppe",
+            "title": "hauptgruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level1:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "hauptgruppenbezeichnung",
+            "slug": "hauptgruppenbezeichnung",
+            "title": "hauptgruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppe",
+            "slug": "obergruppe",
+            "title": "obergruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level2:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "obergruppenbezeichnung",
+            "slug": "obergruppenbezeichnung",
+            "title": "obergruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:code",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppe",
+            "slug": "gruppe",
+            "title": "gruppe",
+            "type": "string"
+          },
+          {
+            "columnType": "economic-classification:generic:level3:label",
+            "conceptType": "economic-classification",
+            "format": "default",
+            "name": "gruppenbezeichnung",
+            "slug": "gruppenbezeichnung",
+            "title": "gruppenbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktion",
+            "slug": "hauptfunktion",
+            "title": "hauptfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level1:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "hauptfunktionsbezeichnung",
+            "slug": "hauptfunktionsbezeichnung",
+            "title": "hauptfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktion",
+            "slug": "oberfunktion",
+            "title": "oberfunktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level2:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "oberfunktionsbezeichnung",
+            "slug": "oberfunktionsbezeichnung",
+            "title": "oberfunktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:code",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktion",
+            "slug": "funktion",
+            "title": "funktion",
+            "type": "string"
+          },
+          {
+            "columnType": "functional-classification:generic:level3:label",
+            "conceptType": "functional-classification",
+            "format": "default",
+            "name": "funktionsbezeichnung",
+            "slug": "funktionsbezeichnung",
+            "title": "funktionsbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "direction",
+            "conceptType": "direction",
+            "format": "default",
+            "name": "titelart",
+            "slug": "titelart",
+            "title": "titelart",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:code",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titel",
+            "slug": "titel",
+            "title": "titel",
+            "type": "string"
+          },
+          {
+            "columnType": "administrative-classification:generic:level3:label",
+            "conceptType": "administrative-classification",
+            "format": "default",
+            "name": "titelbezeichnung",
+            "slug": "titelbezeichnung",
+            "title": "titelbezeichnung",
+            "type": "string"
+          },
+          {
+            "columnType": "date:fiscal-year",
+            "conceptType": "date",
+            "format": "default",
+            "name": "jahr",
+            "slug": "jahr",
+            "title": "jahr",
+            "type": "integer"
+          },
+          {
+            "columnType": "unknown:string",
+            "conceptType": "unknown",
+            "format": "default",
+            "name": "betragtyp",
+            "slug": "betragtyp",
+            "title": "betragTyp",
+            "type": "string"
+          },
+          {
+            "columnType": "value",
+            "conceptType": "value",
+            "decimalChar": ".",
+            "format": "default",
+            "groupChar": "",
+            "name": "betrag",
+            "slug": "betrag",
+            "title": "betrag",
+            "type": "number"
+          }
+        ],
+        "primaryKey": [
+          "typ",
+          "bereich",
+          "einzelplan",
+          "kapitel",
+          "hauptgruppe",
+          "obergruppe",
+          "gruppe",
+          "hauptfunktion",
+          "oberfunktion",
+          "funktion",
+          "titelart",
+          "titel",
+          "jahr"
+        ]
+      }
+    }
+  ],
+  "revision": 0,
+  "title": "berlin-2014-2021"
+}

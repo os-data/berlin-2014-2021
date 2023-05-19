@@ -236,7 +236,7 @@
       "hash": "836f6ede98e6af144d45dfd070fc553b",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012",
-      "path": "data/dhh-2014-2012.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -510,7 +510,7 @@
       "hash": "8b1a65fa2e7ca94eaf557db932028e98",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2014",
-      "path": "data/dhh-2014-2012__2014.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2014.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -784,7 +784,7 @@
       "hash": "994aa82b172bb1fe8e9d029ef809c60f",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2015",
-      "path": "data/dhh-2014-2012__2015.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2015.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -1058,7 +1058,7 @@
       "hash": "92cd4012539ed3103dddf304d5b462b6",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2016",
-      "path": "data/dhh-2014-2012__2016.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2016.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -1332,7 +1332,7 @@
       "hash": "9a84c450c4ede249cd06f37b19273971",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2017",
-      "path": "data/dhh-2014-2012__2017.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2017.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -1606,7 +1606,7 @@
       "hash": "94da76d9cabe1ad1cad705599403d889",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2018",
-      "path": "data/dhh-2014-2012__2018.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2018.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -1880,7 +1880,7 @@
       "hash": "9bcf4d1e66398fc4972986ef702e5bc4",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2019",
-      "path": "data/dhh-2014-2012__2019.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2019.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -2154,7 +2154,7 @@
       "hash": "2919b70686352431f47f7abd4b1ac4f9",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2020",
-      "path": "data/dhh-2014-2012__2020.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2020.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
@@ -2428,7 +2428,7 @@
       "hash": "bf79642dc4cffdf79a48e22ecbeafb3d",
       "mediatype": "text/csv",
       "name": "dhh-2014-2012__2021",
-      "path": "data/dhh-2014-2012__2021.csv",
+      "path": "https://storage.openspending.org/dhh-2014-2012__2021.csv",
       "profile": "data-resource",
       "schema": {
         "fields": [
